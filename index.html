@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Полина, не грусти!</title>
+<title>Полина, привет!</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -12,31 +12,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Тетрадный фон в линеечку */
-    background-color: #f8f9fa;
-    background-image: linear-gradient(#e9ecef 1px, transparent 1px);
-    background-size: 100% 30px;
+    /* Современный, бодрящий градиент */
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
     font-family: 'Segoe UI', system-ui, sans-serif;
     padding: 20px;
     text-align: center;
   }
   .card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 35px 25px;
     max-width: 460px;
     width: 100%;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-    border: 2px solid #e9ecef;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.5);
   }
   h1 {
     font-size: 1.6rem;
     color: #2b2d42;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.3;
   }
   p.subtitle {
-    color: #8d99ae;
+    color: #5c677d;
     font-size: 1rem;
     margin-bottom: 25px;
     line-height: 1.5;
@@ -48,7 +47,7 @@
     margin-bottom: 25px;
   }
   .option-btn {
-    background: #edf2f4;
+    background: #f0f4f8;
     border: 2px solid transparent;
     border-radius: 16px;
     padding: 15px 20px;
@@ -62,18 +61,18 @@
     justify-content: space-between;
     align-items: center;
     line-height: 1.3;
+    text-decoration: none;
   }
   .option-btn:hover {
     background: #fff;
-    border-color: #d90429;
+    border-color: #4a90e2; /* Приятный синий */
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(217,4,41,0.1);
+    box-shadow: 0 5px 15px rgba(74,144,226,0.2);
   }
-  .option-btn span { font-size: 1.3rem; flex-shrink: 0; margin-left: 10px; }
+  .option-btn span { font-size: 1.2rem; flex-shrink: 0; margin-left: 10px; color: #4a90e2; }
   
-  /* Главная кнопка внизу */
-  #tgBtn {
-    background: #2b2d42; /* Темный стильный цвет */
+  .tgBtn {
+    background: #2b2d42;
     color: #fff;
     border: none;
     border-radius: 16px;
@@ -84,56 +83,52 @@
     width: 100%;
     transition: background 0.2s, transform 0.1s;
     margin-top: 10px;
-    box-shadow: 0 8px 20px rgba(43,45,66,0.3);
+    box-shadow: 0 8px 20px rgba(43,45,66,0.25);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
   }
-  #tgBtn:hover { background: #1a1c29; }
-  #tgBtn:active { transform: scale(0.98); }
-
-  .footer-text {
-    margin-top: 25px;
-    font-size: 0.85rem;
-    color: #8d99ae;
-  }
+  .tgBtn:hover { background: #1a1c29; }
+  .tgBtn:active { transform: scale(0.98); }
 </style>
 </head>
 <body>
 
 <div class="card">
-  <h1>Полина, не грусти! 📚</h1>
-  <p class="subtitle">Знаю, что на каникулах скучно и хочется обратно за парты. Выбирай, чем займемся, и жми на кнопку внизу:</p>
+  <h1>Полина, привет!</h1>
+  <p class="subtitle">Раз тебе скучно на каникулах, выбирай, чем займемся:</p>
   
   <div class="options">
-    <button class="option-btn">
-      Погулять с подружками 👯‍♀️ <span>→</span>
-    </button>
-    <button class="option-btn">
-      Погулять напротив аэродрома ✈️ <span>→</span>
-    </button>
-    <button class="option-btn">
-      Поучить репета по английскому, новые слова 🇬🇧 <span>→</span>
-    </button>
-    <button class="option-btn">
-      Кукинг дома (что-нибудь приготовить) 🍳 <span>→</span>
-    </button>
+    <!-- 1 КНОПКА (ПОДРУГИ) -->
+    <a href="https://www.tiktok.com/@dashkaa.mm" target="_blank" class="option-btn">
+      Погулять с подружками <span>👯‍♀️</span>
+    </a>
+    
+    <!-- 2 КНОПКА (АЭРОДРОМ) -->
+    <a href="https://maps.google.com/?q=аэродром+Боровки" target="_blank" class="option-btn">
+      Погулять напротив аэродрома <span>✈️</span>
+    </a>
+    
+    <!-- 3 КНОПКА (АНГЛИЙСКИЙ) -->
+    <a href="https://www.youtube.com/results?search_query=TED+Talks+English+subtitles" target="_blank" class="option-btn">
+      Поучить английский (новые слова) <span>🇬🇧</span>
+    </a>
+    
+    <!-- 4 КНОПКА (КУКИНГ) -->
+    <a href="https://www.youtube.com/results?search_query=простой+рецепт+дома" target="_blank" class="option-btn">
+      Кукинг дома <span>🍳</span>
+    </a>
   </div>
 
-  <button id="tgBtn" onclick="window.location.href='https://t.me/ТВОЙ_НИК'">
-    Написать мне в Telegram 💬
-  </button>
+  <!-- 5 КНОПКА (ТЕЛЕГРАМ) -->
+  <!-- Не забудь поменять ТВОЙ_НИК на свой! -->
+  <a href="https://t.me/DUROVSUKA228" class="tgBtn">
+    Написать мне в Telegram
+  </a>
 
-  <div class="footer-text">Всё заебись, всё охуенно! 💪</div>
 </div>
 
-<script>
-// ================= ВАЖНО =================
-// В кнопке ниже ссылка стоит: https://t.me/ТВОЙ_НИК
-// Обязательно замени "ТВОЙ_НИК" на свой ник в телеграме (без знака @)!
-// Например: https://t.me/vanaabuzov
-// =========================================
-</script>
 </body>
 </html>
